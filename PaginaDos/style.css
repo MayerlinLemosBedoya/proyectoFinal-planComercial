@@ -1,0 +1,236 @@
+.caja{
+    width: 1500px;
+    height:100px;
+    margin: 0%;
+    padding:0px;
+    border: 0cap;
+   background: hsl(226, 65%, 35%);
+   display: flex;
+   justify-content:center;
+   align-content: space-between;
+   flex-wrap: wrap;
+   flex-direction: column-reverse;
+}
+.logo{
+    width: 100px;
+    height: 130px;
+    margin: 0%;
+}
+.texto{
+   font-size: 30px;
+}
+button{
+    width: 200px ;
+    height: 70px;
+    border-radius: 45px;
+    font-size:20px;
+    background: hwb(203 25% 23%);
+    border: none;
+    font-family: sans-serif;
+}
+.nav{
+   background-color:rgb(239, 235, 235);
+}
+
+.nav ul{
+
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding:0px;
+    margin: 0px;
+    text-align: center;
+
+}
+.uno{
+    display: block;
+    width: 60px;
+    font-family: sans-serif;
+    font-weight: 20px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 25px;
+    text-decoration: none;
+    color:rgb(4, 4, 4);
+    background-color: hwb(203 25% 23%);
+
+}
+
+.dos{
+    display: block;
+    width: 60px;
+    font-family: sans-serif;
+    font-weight: 20px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 25px;
+    text-decoration: none;
+    color: rgb(4, 4, 4);
+    background-color:hwb(203 25% 23%);
+    text-align: center;
+}
+
+.tres {
+    display: block;
+    width: 65px;
+    font-family: sans-serif;
+    font-weight: 20px;
+    border-radius: 15px;
+    margin: 10px;;
+    padding: 25px;
+    text-decoration: none;
+    color: rgb(4, 4, 4);
+    background-color: hwb(203 25% 23%);
+}
+
+.cuatro{
+    display: block;
+    width: 80px;
+    font-family: sans-serif;
+    font-weight: 20px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 25px ;
+    text-decoration: none;
+    color: rgb(4, 4, 4);
+    background-color:hwb(203 25% 23%) ;
+    text-align: center;
+}
+
+.cinco{
+    display: block;
+    width: 70px;
+    font-family:sans-serif;
+    font-weight: 20px;
+    border-radius: 15px;
+    margin:10px;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: rgb(4, 4, 4);
+    background-color: hwb(203 25% 23%);
+    text-align: center;
+}
+
+section{
+    background: rgb(239, 235, 235);
+    padding: 0px;
+    width: 1500px;
+    margin: 0px;
+}
+
+.conten{
+    background-color: hsl(226, 65%, 35%);
+    width: 1200px;
+    height: 80px;
+    margin-left: 138px; 
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+.con {
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+.cuadro{
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center; 
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+.herramientas{
+    background-color: hsl(226, 65%, 35%);
+    margin: 10px 0px 5px 0px;
+    padding: 5px;
+    width: 500px;;
+    height: 120px;
+    text-align: center;
+    font-family: sans-serif;
+}
+p{
+    background-color: rgb(220, 210, 210);
+    margin:10px 0px 5px 0px;
+    padding: 5px;
+    width: 700px;
+    height: 120px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.contenedordos{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedortres{
+    display: flex;
+    justify-content: center;
+}
+.analisis{
+    background-color: hsl(226, 65%, 35%);
+    margin: 10px 0px 5px 0px;
+    padding: 5px;
+    width: 500px;;
+    height: 120px;
+    text-align: center;
+    font-family: sans-serif;
+   
+}.planificación{
+    background-color: hsl(226, 65%, 35%);
+    margin: 10px 0px 5px 0px;
+    padding: 5px;
+    width: 500px;;
+    height: 120px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.contenedorcuatro{
+    display: flex;
+    justify-content: center;
+}
+
+.evaluacion{
+    background-color: hsl(226, 65%, 35%);
+    margin: 10px 0px 5px 0px;
+    padding: 5px;
+    width: 500px;;
+    height: 120px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.contenedorcinco{
+    display: flex;
+    justify-content: center;
+}
+.capacitación{
+    background-color: hsl(226, 65%, 35%);
+    margin: 10px 0px 5px 0px;
+    padding: 5px;
+    width: 500px;;
+    height: 120px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.footer{
+    background-color: rgb(239, 235, 235);
+    margin: 0px;
+    display:flex;
+    padding:20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1460px;  
+}
+.conocer{
+    padding: 12px;
+}
+.parrafo{
+    background-color:rgb(239, 235, 235) ;
+    margin: 10px;
+    padding: 0px;
+    height: 30px;
+} 
+
