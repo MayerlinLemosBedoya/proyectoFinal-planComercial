@@ -28,7 +28,6 @@ button{
  font-size: 16px;
  border-radius: 20px;
  background-color: hsl(226, 31%, 69%);
- 
 
 }
 .nav{
@@ -45,7 +44,6 @@ button{
     align-items: center;
     text-align: center;
 }
-
 .uno{
     display: block;
     width: 60px;
@@ -111,115 +109,127 @@ button{
     background-color: hwb(203 25% 23%);
 }
 
-
-.conten{
-    background-color: hsl(226, 65%, 35%);
-    width: 1207px;
-    height: 50px;
-    margin-left: 201px; 
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-}
-.con {
-    font-family: sans-serif;
-    font-size: 20px;
-}
-
-h2{
-    font-size: 22px;
-}
-.cuadro{
-    font-family: sans-serif;
-    font-size: 25px;
-    text-align: center; 
-}
-
-.contenedor{
-    display: flex;
-    justify-content: center;
-}
-.herramientas{
-    background-color: lch(100% 0.01 296.81);
-    margin: 10px 0px 5px 0px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
+.iconos {
     text-align: center;
-    font-family: sans-serif;
-    border: solid;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold; 
 }
-.mi{
-    background-color: rgb(255, 255, 255);
-    margin:10px 0px 5px 0px;
-    padding: 5px;
+
+a{
+    text-decoration:none ;
+    color: black;
+}
+
+.div1 { 
+    margin: 40px;
+    position: relative;
+    border-radius: 20px;
+    color: black;
+    background-color:#d8d5d5d1;
+    padding: 15px;
     width: 700px;
-    height: 120px;
-    font-size: 20px;
-    font-family: sans-serif;
-    border: solid;
-}
-.contenedordos{
-    display: flex;
-    justify-content: center;
+    height: 300px;
+    text-align: right;
+
 }
 
-.contenedortres{
-    display: flex;
-    justify-content: center;
-}
-.analisis{
-    background-color: lch(100% 0.01 296.81);
-    margin: 10px 0px 5px 0px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
+.div2 {
+    position: absolute;
+    top: 0px;
+    background-color: #fffcfc;
+    border-radius: 2%;
+    color: black;
+    padding: 15px;
+    margin: 10px;
+    width: 400px;
+    height: 200px;
     text-align: center;
-    font-family: sans-serif;
-    border: solid;
-   
-}.planificación{
-    background-color: lch(100% 0.01 296.81);
-    margin: 10px 0px 5px 0px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    border: solid;
-}
-.contenedorcuatro{
+    justify-content: space-between;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.N{
+    background-color: #d8d5d5d1;
+    border: none;
+    width: 170px;
+    height: 30px;
+    margin: 5px;
+}
+.A{
+    background-color: #d8d5d5d1;
+    border: none;
+    width: 170px;
+    height: 30px;
+    margin: 5px;
+}
+.C{
+ background-color: #d8d5d5d1;
+    border: none;
+    width: 170px;
+    height: 30px;
+    margin: 5px;
+
 }
 
-.evaluacion{
-    background-color: lch(100% 0.01 296.81);
-    margin: 10px 0px 5px 0px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
-    text-align: center;
+.Y{
+ background-color: #d8d5d5d1;
+    border: none;
+    width: 170px;
+    height: 30px;
+    margin: 5px;
+
+}
+#perrafo {
+    justify-content: center;
+    color: rgb(194, 197, 201);
+    background-color: white;
+    width: 370px;
+    height: 30px;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;  
+    justify-content: space-around;
+}
+#botono3 {
+    background-color: rgb(24, 24, 165);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: center;
+
+}
+#boton2 {
+    background-color: rgb(137, 162, 185);
+    color: #000000;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+
+
+}
+#boton1 {
+    background-color:hwb(203 25% 23%);
+    color: black;
+    border-radius: 20px;
     font-family: sans-serif;
-    border: solid;
+    padding: 10px;
+    display: flex;
+   justify-content: center;
+
 }
 
-.contenedorcinco{
-    display: flex;
-    justify-content: center;
-}
-.capacitación{
-    background-color: lch(100% 0.01 296.81);
-    margin: 10px 0px 5px 0px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    border: solid;
-}
-footer{
+
+
+
+ footer{
     display: flex;
     background-color:hsl(226, 65%, 35%);
     padding:8px;
