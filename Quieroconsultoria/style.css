@@ -1,7 +1,7 @@
 .caja{
     width: 100%;
     height:100px;
-    margin: 0px;
+    margin: 0%;
     padding:0px;
     border: 0cap;
    background: hsl(226, 65%, 35%);
@@ -38,8 +38,15 @@ button:hover{
 }
 .nav{
    background-color:#ffffff;
+   margin: 0px;
 }
-
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+h2{
+    color: #ffffff;
+}
 .nav ul{
 
     list-style: none;
@@ -50,6 +57,7 @@ button:hover{
     align-items: center;
     text-align: center;
 }
+
 .uno{
     display: block;
     width: 60px;
@@ -68,7 +76,6 @@ button:hover{
 nav a:hover {
   color: #fff;
 }
-
 .dos{
     display: block;
     width: 64px;
@@ -130,126 +137,79 @@ nav a:hover {
     background-color: #3b5998;
 }
 
-li{
-    font-size: 18px;
+.form-register {
+  width: 400px;
+  background: #73ace6;
+  padding: 35px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.conten{
-    background-color: hsl(226, 65%, 35%);
-    width: 1220px;
-    height: 50px;
-    margin-left: 197px;
-    margin-right:14px;
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-}
-.con {
-    font-family: sans-serif;
-    font-size: 20px;
-    color: #ffffff;
-}
-
 h2{
-    font-size: 22px;
-}
-.cuadro{
-    font-family: sans-serif;
+    text-align: center;
     font-size: 25px;
-    text-align: center; 
+}
+.controls {
+  width: 100%;
+  background:white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: black;
+}
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
-.contenedor{
-    display: flex;
-    justify-content: center;
-}
-.herramientas{
-    background-color: lch(100% 0.01 296.81);
-   margin: 4px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    border: solid;
-}
-.mi{
-    background-color: rgb(255, 255, 255);
-    margin: 4px;
-    padding: 5px;
-    width: 700px;
-    height: 120px;
-    font-size: 20px;
-    font-family: sans-serif;
-    border: solid;
-}
-.contenedordos{
-    display: flex;
-    justify-content: center;
+.form-register .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 7px 0;
+  font-size: 16px;
 }
 
-.contenedortres{
-    display: flex;
-    justify-content: center;
+.form-register a {
+  color: white;
+  text-decoration: none;
 }
-.analisis{
-    background-color: lch(100% 0.01 296.81);
-    margin: 4px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    border: solid;
-   
-}.planificación{
-    background-color: lch(100% 0.01 296.81);
-    margin: 4px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    border: solid;
-}
-.contenedorcuatro{
-    display: flex;
-    justify-content: center;
+.form-register .botons:hover{
+    background-color: hsl(226, 65%, 35%);
 }
 
-.evaluacion{
-    background-color: lch(100% 0.01 296.81);
-    margin: 4px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    border: solid;
+li{
+    font-size: 17px;
+}
+.listas{
+    padding: 0px;
+    margin: 0px;
+    width: 100px;
+    height:80px ;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 
-.contenedorcinco{
-    display: flex;
-    justify-content: center;
-}
-.capacitación{
-    background-color: lch(100% 0.01 296.81);
-    margin: 4px;
-    padding: 5px;
-    width: 500px;;
-    height: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    border: solid;
-}
-footer{
+.footer{
     display: flex;
     background-color:hsl(226, 65%, 35%);
     padding:8px;
-    margin:10px;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 10px;
 }
 .contacto{
   margin:0px;
@@ -275,9 +235,3 @@ footer{
     color: #ffffff;
 }
 
-p{
-    font-size: 20px;
-}
-h3{
-    color: #ffffff;
-}

@@ -12,7 +12,7 @@
 <div class="caja">
 <img src="/img/logo.png"class="logo">
 <h1 class="texto">PLAN COMERCIAL</h1>
-<a href="inicio.html"><button type="submit"><b>Inicio de sesión</b></button></a>
+<a href="/PaginaSeis/index.html"><button type="submit"><b>Inicio de sesión</b></button></a>
 </div>
 </header>
 <nav class="nav">
@@ -20,41 +20,100 @@
 <li ><a href="/PaginaPrincipal/index.html"class= "uno"><b>Inicio</a></b></li>
 <li><a href="/paginaTres/index.html" class="dos"><b>Servicios</b></a></li>
 <li><a href="/PaginaDos/index.html" class="tres"><b>Recursos</b></a></li>
-<li><a href="contactanos" class="cuatro"><b>Contactanos</b></a></li>
-<li><a href="Quiero consultoria" class="cinco"> <b>Quiero consultoria </b></a></li>
+<li><a href="/PaginaCuatro/index.html" class="cuatro"><b>Conocenos</b></a></li>
+<li><a href="/Quieroconsultoria/index.html" class="cinco"> <b>Quiero consultoria</b></a></li>
 </ul>
 </nav>
-<section >
-<body>
-    <div>
-    <ul>
-    <li><a href="Ingresos.html">Ingresos</a></li>
-     <li><a href="Fechas.html">Fechas</a></li>
-     <li><a href="Periodos.html">Periodos</a></li>
-     <li><a href="Dashboard.html">Dashboard</a></li>
-    </ul>
-    </div>
-    <div class="padre">
-    <div class="formulario-container">
-        <h2>Guardar ingreso</h2><hr>
-        <button>Guardar y agregar otro</button>
-        <button>Recurrente</button>
-        <button>seleccionar categoria</button>
-        <button>Asignar a Cuenta</button>
-        <button>Adjuntar Comprobante</button>
-        <button class="cancelar">Cancelar</button>
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" name="fecha">
-        <label for="descripcion">Descripción:</label>
-        <input type="text" id="descripcion" name="descripcion">
-    </div>
-    </div>
+<div class="container">
+        <h2>Registro de Ingresos y Gastos</h2>
+        <div class="section">
+            <h2>Ingresos</h2>
+            <div class="input-group">
+                <label for="income-description">Descripción</label>
+                <input type="text" id="income-description" placeholder="Salario">
+            </div>
+            <div class="input-group">
+                <label for="income-amount">Cantidad ($)</label>
+                <input type="number" id="income-amount" placeholder=" 100">
+            </div>
+            <div class="button-group">
+                <button onclick="addIncome()">Agregar Ingresos</button>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Gastos</h2>
+            <div class="input-group">
+                <label for="expense-description">Descripción</label>
+                <input type="text" id="expense-description" placeholder="Nueva inversión">
+            </div>
+            <div class="input-group">
+                <label for="expense-category">Categoria</label>
+                <select id="expense-category">
+                    <option value="Inversión">Inversión</option>
+                    <option value="Salarios">Salarios</option>
+                    <option value="Gastos adicionales">Gastos adicionales</option>
+                    <option value="Impuestos">Impuestos</option>
+                    <option value="Infraestructura">Infraestructura</option>
+                    <option value="Colaboraciones">Colaboraciones</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="expense-amount">Monto ($)</label>
+                <input type="number" id="expense-amount" placeholder="50000">
+            </div>
+            <div class="button-group">
+                <button onclick="addExpense()">Añadir gastos</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <h2>Historial de transacción</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Categoria</th>
+                        <th>Gastos ($)</th>
+                        <th>Tipo</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-history">
+                </tbody>
+            </table>
+        </div>
+        <div class="summary">
+    <h2>Resumen del presupuesto</h2>
+    <p>Ingreso total: $<span id="total-income">0</span></p>
+    <p>Gasto total $<span id="total-expenses">0</span></p>
+    <p>Balance: $<span id="balance">0</span></p>
+</div>
+<div class="clear-button-group">
+    <button onclick="clearAll()">Borrar</button>
+</div>
+</div>
 </body>
-
-
-
-
-
+<footer class="footer">
+<div class="contacto">
+<h3>CONOCENOS</h3>
+<p>Quienes somos </p>
+<P>Nuestro proposito</P>
+<p>Valores y compromiso</p>
+<p>Contacto</p>
+</div>
+<div class="dibujos">
+<a href="https://www.facebook.com/profile.php?id=61575970664776"><img src="/img/face.jpg" width="80px" class="F" ></a>
+<a href="https://wa.link/iwws7w"><img src="/img/whap.png" width="80px" class="W"></a>
+<a href="https://www.instagram.com/plan_comercial_23?igsh=bjM2Z2pzMm9qdnhh&utm_source=qr"><img src="/img/insta.png" width="80px" class="I"></a>
+<p class="correo">Plancomercial@gmail.com</p>
+</div>
+</footer>
 </html>
+
+
+
+
+
+
+
 
 
