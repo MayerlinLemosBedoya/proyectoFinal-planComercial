@@ -241,43 +241,66 @@ h2{
     text-align: center;
     font-family: sans-serif;
     border: solid;
+    margin-bottom:8px;
 }
 footer{
     display: flex;
     background-color:hsl(226, 65%, 35%);
-    padding:8px;
-    margin:10px;
+    padding:0px;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0px;
 }
 .contacto{
   margin:0px;
   color: #ffffff;
+  display: flex;
+  gap: 4px;
+  margin: 40px; 
 }
 .dibujos{
     padding: 20px;
 }
 .F{
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 50px;
+    width: 60px;
+}
+a{
+    text-decoration: none;
+    color:#ffffff
 }
 .W{
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 50px;
+    width: 60px;
 }
 .I{
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 50px;
+    width:60px;   
 }
 .correo{
     text-align: center;
     color: #ffffff;
 }
-
-p{
-    font-size: 20px;
+h2{
+    color: black;
+}
+.recurso{
+    text-align: center;
 }
 h3{
+    font-size: 20px;
+}
+.derechos{
+    display: flex;
     color: #ffffff;
+}
+p{
+    font-size: 20px;
 }
