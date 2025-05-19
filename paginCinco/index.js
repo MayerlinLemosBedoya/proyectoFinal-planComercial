@@ -1,106 +1,124 @@
-// Captura de elementos HTML
-const descripcionIngreso = document.getElementById('descripcion-ingreso');
-const cantidadIngreso = document.getElementById('cantidad-ingreso');
-const btnAgregarIngreso = document.getElementById('btn-agregar-ingreso');
-const descripcionGasto = document.getElementById('descripcion-gasto');
-const categoriaGasto = document.getElementById('categoria-gasto');
-const montoGasto = document.getElementById('monto-gasto');
-const btnAnadirGasto = document.getElementById('btn-anadir-gasto');
-const ingresoTotal = document.getElementById('ingreso-total');
-const gastoTotal = document.getElementById('gasto-total');
-const balance = document.getElementById('balance');
-const historialTransacciones = document.getElementById('historial-transacciones');
-const btnBorrar = document.getElementById('btn-borrar');
+let totalIncome = 0;
+let totalExpenses = 0;
+let transactions = [];
 
-let totalIngresos = 0;
-let totalGastos = 0;
+window.onload = function () {
+    // Cargar datos guardados
+    const savedData = JSON.parse(localStorage.getItem('budgetData'));
+    if (savedData) {
+        totalIncome = savedData.totalIncome;
+        totalExpenses = savedData.totalExpenses;
+        transactions = savedData.transactions;
+        updateSummary();
+        renderTransactionHistory();
+    }
+};
 
-// Funciones para agregar ingresos y gastos//
-function agregarIngreso() {
-  const descripcion = descripcionIngreso.value;
-  const cantidad = parseFloat(cantidadIngreso.value);
+function addIncome() {
+    const description = document.getElementById('income-description').value.trim();
+    const amount = parseFloat(document.getElementById('income-amount').value);
 
-  if (descripcion && !isNaN(cantidad)) {
-    totalIngresos += cantidad;
-    ingresoTotal.textContent = totalIngresos;
-    actualizarBalance();
-    agregarTransaccion(descripcion, cantidad, 'Ingreso');
-    limpiarCamposIngreso();
-  } else {
-    alert('Por favor, ingrese una descripción y una cantidad válida para el ingreso.');
-  }
-}
-function anadirGasto() {
-  const descripcion = descripcionGasto.value;
-  const categoria = categoriaGasto.value;
-  const monto = parseFloat(montoGasto.value);
+    if (!description || isNaN(amount) || amount <= 0) {
+        alert('Por favor, ingresa una descripción y una cantidad válida para el ingreso.');
+        return;
+    }
 
-  if (descripcion && categoria && !isNaN(monto)) {
-    totalGastos += monto;
-    gastoTotal.textContent = totalGastos;
-    actualizarBalance();
-    agregarTransaccion(descripcion, monto, 'Gasto', categoria);
-    limpiarCamposGasto();
-  } else {
-    alert('Por favor, ingrese una descripción, categoría y monto válido para el gasto.');
-  }
-}
-
-// Función para agregar transacción al historial
-function agregarTransaccion(descripcion, monto, tipo, categoria = '') {
-    const fila = document.createElement('tr');
-    fila.innerHTML = `
-      <td>${descripcion}</td>
-      <td>${categoria}</td>
-      <td>${monto}</td>
-      <td>${tipo}</td>
-      <td><button class="btn-eliminar">Eliminar</button></td>
-    `;
-    historialTransacciones.appendChild(fila);
-  
-    const btnEliminar = fila.querySelector('.btn-eliminar');
-    btnEliminar.addEventListener('click', () => {
-      if (tipo === 'Ingreso') {
-        totalIngresos -= monto;
-        ingresoTotal.textContent = totalIngresos;
-      } else {
-        totalGastos -= monto;
-        gastoTotal.textContent = totalGastos;
-      }
-      actualizarBalance();
-      fila.remove();
+    totalIncome += amount;
+    transactions.push({
+        description,
+        category: 'Ingreso',
+        amount: 0,
+        type: 'Ingreso'
     });
-  }
 
-// Función para calcular el balance
-function actualizarBalance() {
-  const saldo = totalIngresos - totalGastos;
-  balance.textContent = saldo;
+    updateSummary();
+    saveData();
+    renderTransactionHistory();
+
+    // Limpiar campos
+    document.getElementById('income-description').value = '';
+    document.getElementById('income-amount').value = '';
 }
 
-// Funciones para limpiar los campos de entrada
-function limpiarCamposIngreso() {
-    descripcionIngreso.value = '';
-    cantidadIngreso.value = '';
+function addExpense() {
+    const description = document.getElementById('expense-description').value.trim();
+    const category = document.getElementById('expense-category').value;
+    const amount = parseFloat(document.getElementById('expense-amount').value);
+
+    if (!description || isNaN(amount) || amount <= 0) {
+        alert('Por favor, ingresa una descripción y un monto válido para el gasto.');
+        return;
+    }
+
+    totalExpenses += amount;
+    transactions.push({
+        description,
+        category,
+        amount,
+        type: 'Gasto'
+    });
+
+    updateSummary();
+    saveData();
+    renderTransactionHistory();
+
+    // Limpiar campos
+    document.getElementById('expense-description').value = '';
+    document.getElementById('expense-amount').value = '';
 }
 
-function limpiarCamposGasto() {
-    descripcionGasto.value = '';
-    montoGasto.value = '';
+function renderTransactionHistory() {
+    const table = document.getElementById('transaction-history');
+    table.innerHTML = ''; // Limpiar contenido
+
+    transactions.forEach((t, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${t.description}</td>
+            <td>${t.category}</td>
+            <td>${t.type === 'Gasto' ? '$' + t.amount.toFixed(2) : '-'}</td>
+            <td>${t.type}</td>
+            <td><button onclick="deleteTransaction(${index})">Eliminar</button></td>
+        `;
+        table.appendChild(row);
+    });
 }
 
-// Función para borrar el formulario
-function borrarFormulario() {
-  totalIngresos = 0;
-  totalGastos = 0;
-  ingresoTotal.textContent = 0;
-  gastoTotal.textContent = 0;
-  balance.textContent = 0;
-  historialTransacciones.innerHTML = '';
-  limpiarCamposIngreso();
-  limpiarCamposGasto();
+function deleteTransaction(index) {
+    const t = transactions[index];
+    if (t.type === 'Ingreso') {
+        totalIncome -= 0; // ingreso no suma cantidad directamente
+    } else {
+        totalExpenses -= t.amount;
+    }
+    transactions.splice(index, 1);
+    updateSummary();
+    saveData();
+    renderTransactionHistory();
 }
-// Manejo de eventos
-btnAgregarIngreso.addEventListener('click', agregarIngreso);
-btnAnadirGasto.addEventListener('click', anadirGasto);
-btnBorrar.addEventListener('click', borrarFormulario);
+
+function updateSummary() {
+    document.getElementById('total-income').innerText = totalIncome.toFixed(2);
+    document.getElementById('total-expenses').innerText = totalExpenses.toFixed(2);
+    document.getElementById('balance').innerText = (totalIncome - totalExpenses).toFixed(2);
+}
+
+function saveData() {
+    const data = {
+        totalIncome,
+        totalExpenses,
+        transactions
+    };
+    localStorage.setItem('budgetData', JSON.stringify(data));
+}
+
+function clearAll() {
+    if (confirm('¿Estás seguro que deseas borrar todos los datos?')) {
+        totalIncome = 0;
+        totalExpenses = 0;
+        transactions = [];
+        updateSummary();
+        renderTransactionHistory();
+        localStorage.removeItem('budgetData');
+    }
+}
