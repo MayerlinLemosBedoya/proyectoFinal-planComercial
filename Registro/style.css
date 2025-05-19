@@ -130,7 +130,7 @@ nav a:hover {
     background-color: #3b5998;
 }
 
-.form-register {
+#form-register {
   width: 400px;
   background: #8db0d3;
   padding: 35px;
@@ -157,12 +157,12 @@ h2{
   font-size: 18px;
   color:black;
 }
-.form-register a:hover {
+#form-register a:hover {
   color: white;
   text-decoration: underline;
 }
 
-.form-register .botons {
+#form-register .botons {
   width: 100%;
   background: #1f53c5;
   border: none;
@@ -172,14 +172,14 @@ h2{
   font-size: 16px;
 }
 
-.form-register a {
+#form-register a {
   color: white;
   text-decoration: none;
 }
-.form-register .botons:hover{
+#form-register .botons:hover{
     background-color: hsl(226, 65%, 35%);
 }
-.form-register a:hover {
+#form-register a:hover {
   color: white;
   text-decoration: underline;
 }

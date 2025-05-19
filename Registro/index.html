@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <title>Formulario Registro</title>
 <link rel="icon"type="image/png" href="/img/logo.png">
@@ -22,18 +22,20 @@
 <li><a href="/paginaTres/index.html" class="dos"><b>Servicios</b></a></li>
 <li><a href="/PaginaDos/index.html" class="tres"><b>Recursos</b></a></li>
 <li><a href="/PaginaCuatro/index.html" class="cuatro"><b>Conocenos</b></a></li>
-<li><a href="/Quieroconsultoria/index.html" class="cinco"> <b>Quiero consultoria</b></a></li>
+<li><a href="/Public/Quieroconsultoria/index.html" class="cinco"> <b>Quiero consultoria</b></a></li>
 </ul>
 </nav>
-  <section class="form-register">
-    <h2>Formulario de Registro</h2>
+  <section id="form-register">
+  <h2>Formulario de Registro</h2>
+  <form id="miFormulario">
     <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
     <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-    <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
-    <a href=""><button type="submit" class="botons"><b>Registrar</b></button></a>
-    <p><a href="/PaginaSeis/index.html">¿Ya tengo Cuenta?</a></p>
-  </section>
+    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+    <button type="submit" class="botons"><b>Enviar</b></button>
+  </form>
+  <p><a href="/PaginaSeis/index.html">¿Ya tengo Cuenta?</a></p>
+</section>
 <script src="index.js"></script>
 </body>
 <footer class="footer">

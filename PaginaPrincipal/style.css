@@ -149,13 +149,20 @@ p{
     justify-content: space-around;
     padding: 20px;
     background-color: #ffffff;
+   
 }
 .card {
     width: 30%;
     padding: 15px;
     border: 1px solid #ccc;
     text-align: center;
+    transition: transform 1s ease;
 }
+
+.card:hover{
+    transform: scale(1.1);
+}
+
 .card img{
     width: 18%
 }
